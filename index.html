@@ -51,32 +51,291 @@
   <!-- page content goes into <body> -->
   <body>
     <div class="item1" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
-      <div id="hwm-topbar" style="display: flex; justify-content: space-between; align-items: center; background-color: rgb(165, 195, 179); font-family: Helvetica, sans-serif; ">
+      <div id="hwm-topbar" 
+      style="display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      background-color: rgb(40, 40, 40); 
+      font-family: Helvetica, sans-serif;
+      color: white;">
       <div id="title"><h1 style="padding-left: 30px;">Dr. Treat Iterative Design</h1></div>
       <div id="nav-bar" style="justify-content: flex-start; padding-right: 30px;">
-        <--! Input buttons here if we want to go to different pages instead of a big scroll? -->
+        <!-- Buttons will lead to different portions of the page instead of completely different pages. -->
+        <input type="button" class="button-current" onClick="location.href='#context'" value="Context">
+        <input type="button" class="button-current" onClick="location.href='#context'" value="Context">
       </div>
       </div>
     </div>
 
+    <!-- Code to make sure the top bar (and most importantly, the buttons!) remain at the top so users can easily navigate to different portions of the page.-->
+    <!-- From https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
+    <!-- TODO: Not working yet. -->
+    <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+       if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+          } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+
+<!-- Div for the context of the startup. -->
     <div class="item2">
-      <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;"> 
-      </div>
-    </div>
-
-    <div class="item3" style="display: flex; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px;">  
-    </div>
-
-    <div class="item4" style="display: flex; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px;">
-    </div>
-
-    <div class="item5"></div>
-      <div class="item6"></div>
-      <div class="item7"></div>
-      <div class="item8"></div>
+      <!-- This wrapper div will ensure the divs inside it are in a row, unless wrap causes them to stack on top of eachother. -->
+      <!-- Divs inside or startup-image and startup-context! -->
+      <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;">
+        <div class="startup-image" style="display: flex">
+          <img src="https://bookface-images.s3.amazonaws.com/small_logos/d32db90d7196c1ce3567ce75271b6314a38a8b22.png" />
         </div>
-
+        <div class="startup-context" style="font-family: Helvetica, sans-serif;">
+          <h3 style="max-width: 550px; padding-left: 20px;">"One Medical for Pets."</h3>
+          <h3 style="max-width: 550px;  padding-left: 20px; font-weight: normal;">
+            Based out of San Francisco and geared toward millenial pet parents, Dr. Treat aims to offer virtual and in-clinic services as well as highly
+            personalized care for every pet.
+            </h3>
+            <div id="buttons" style="padding: 20px;">
+              <input type="button" class="button" onClick="window.open('https://www.ycombinator.com/companies/dr-treat', '_blank')" value="YCombinator Site">
+              <input type="button" class="button" onClick="window.open('https://www.drtreat.com/','_blank')" value="Dr.Treat Site">
+            </div>
+        </div>
       </div>
+    </div>
+
+    <!-- Div for the Initial Sketches. Wrapper div is flex-direction column so each image will stack on top of eachother. -->
+    <!-- Inner divs are row so the image and text sit side by side (but will wrap) -->
+    <div class="item3" style="display: flex; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px;">
+      <h3 
+      style="font-family: Helvetica, sans-serif; 
+      background-color:rgb(40, 40, 40);
+      color: white;
+      width: 100%; 
+      padding: 30px; 
+      margin-left: 30px; 
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+      Initial Sketches and Ideas
+    </h3>      
+      <!-- First sketch -->
+      <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;">
+        <div class="sketch-image" style="display: flex">
+          <img src="https://i.imgur.com/ERNGlKY.jpg" width="300px" height="350px"/>
+        </div>
+        <div class="startup-context" style="font-family: Helvetica, sans-serif;">
+          <h3 style="max-width: 550px; padding-left: 20px;">The Paid Profile</h3>
+          <h3 style="max-width: 550px;  padding-left: 20px; font-weight: normal;">
+            For the paid profile page, a user would begin on the home page which might have a screen of icons indicating different types
+            of animals. Clicking on a pet icon would lead to a specialized <i>Pet Information</i> page that would contain information on
+            how to take care of your animal in different emergency situations.
+          </h3>
+          <h3 style="max-width: 550px;  padding-left: 20px; font-weight: normal;">
+            The home page would also have an <i>Emergency</i> button that would allow you to select the type of animal and what was wrong
+            with the animal, then would display contacts for veterinarians nearby that could assist the user. 
+          </h3>
+          <h3 style="max-width: 550px;  padding-left: 20px; font-weight: normal;">
+            Finally, the home page would have a <i>Profiles</i> page that would contain all of the user's personal pets. 
+          </h3>
+        </div>
+      </div>
+      <!-- Second Sketch -->
+      <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;">
+        <div class="sketch-image" style="display: flex">
+          <img src="https://i.imgur.com/9GrIc9x.jpg" width="300px" height="350px"/>
+        </div>
+        <div class="startup-context" style="font-family: Helvetica, sans-serif;">
+          <h3 style="max-width: 550px; padding-left: 20px;">The Free Profile</h3>
+          <h3 style="max-width: 550px;  padding-left: 20px; font-weight: normal;">
+            Description here! @Lukas
+          </h3>
+        </div>
+      </div>
+      <!-- Third Sketch -->
+      <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;">
+        <div class="sketch-image" style="display: flex">
+          <img src="https://bookface-images.s3.amazonaws.com/small_logos/d32db90d7196c1ce3567ce75271b6314a38a8b22.png" width="300px" height="350px"/>
+        </div>
+        <div class="startup-context" style="font-family: Helvetica, sans-serif;">
+          <h3 style="max-width: 550px; padding-left: 20px;">Emergencies and Talking to a Vet</h3>
+          <h3 style="max-width: 550px;  padding-left: 20px; font-weight: normal;">
+            Description here! @Ethan
+          </h3>
+        </div>
+      </div>
+      <!-- Fourth Sketch -->
+      <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;">
+        <div class="sketch-image" style="display: flex">
+          <img src="https://i.imgur.com/OHaALgj.jpg" width="300px" height="350px"/>
+        </div>
+        <div class="startup-context" style="font-family: Helvetica, sans-serif;">
+          <h3 style="max-width: 550px; padding-left: 20px;">Pet Profiles</h3>
+          <h3 style="max-width: 550px;  padding-left: 20px; font-weight: normal;">
+            Description here! @Becca
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Div for Wireframe -->
+    <div class="item4" style="display: flex; flex-direction: column; align-items: center; margin-left: 15px; margin-right: 15px;">
+      <h3 
+      style="font-family: Helvetica, sans-serif; 
+      background-color:rgb(40, 40, 40);
+      color: white;
+      width: 100%; 
+      padding: 30px; 
+      margin-left: 30px; 
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+     Wireframe from Combined Ideas
+    </h3>      
+      <img src="https://i.imgur.com/oMLiI3g.png" width="1000px" height="350px" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);" />
+    </div>
+
+    <!-- Div for Interactive HiFi with critique feedback -->
+    <div class="item5">
+      <h3 
+      style="font-family: Helvetica, sans-serif; 
+      background-color:rgb(40, 40, 40);
+      color: white;
+      width: 100%; 
+      padding: 30px; 
+      margin-left: 30px; 
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+     Interactive Hi-Fi Mockup with Critique Feedback
+    </h3>
+    <!-- Original HiFi-->
+    <div>
+      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" 
+      width="800" 
+      height="450" 
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhiScXEgqt94Cuu525TL91y%2FIterative-Design-Wireframe%3Fpage-id%3D14%253A36%26node-id%3D14%253A38%26viewport%3D236%252C578%252C0.25%26scaling%3Dscale-down%26starting-point-node-id%3D14%253A38" allowfullscreen></iframe>
+    </div>
+    <!-- Feedback -->
+    <div>
+      <ul>
+        <li>Revamp the hamburger menu options to ensure the options are actions the user would actually want to complete</li>
+        <li>Hide the nav bar when in the chat so the buttons aren’t accidentally clicked</li>
+        <li>In the appointment tab include affordances to make it intuitive to schedule an appointment</li>
+        <li>Improve the icons. It is unclear what the pawprint leads to</li>
+        <li>Include an option to schedule appointments within the individual pet tab</li>
+        <li>The fact that the paw print and “Your Pets” icon exists on the home page is redundant as they lead to the same page</li>
+        <li>The emergency button on the bottom is problematic. Maybe put it somewhere that is less likely to be accidentally pressed</li>
+        <li>The at home diagnosis page should be more flushed out</li>
+        <li>Users forget the name of the app while using it, so ensure it is somewhere in the interface</li>
+        <li>A local “back” button may be helpful</li>
+        <li>The grid is great with icons + labels. I wish the home page had some other thing separate from the grid. 
+          Maybe a simple welcome message that took up a 1/3 of the page, and had some kind of “status” for my pets</li>
+        <li>For the individual pet page, maybe make the personal care plan like a daily care plan where the owner 
+          can mark off what they have done so they can keep track of what care plan they still need to do throughout the day.</li>
+      </ul>
+    </div>
+    <!-- Redesigned HiFi-->
+    <div>
+      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" 
+      width="800" 
+      height="450" 
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhiScXEgqt94Cuu525TL91y%2FIterative-Design-Wireframe%3Fpage-id%3D220%253A3116%26node-id%3D220%253A3875%26viewport%3D456%252C395%252C0.24%26scaling%3Dscale-down%26starting-point-node-id%3D220%253A3875" allowfullscreen></iframe>
+    </div>
+    </div>
+    <!-- Div for user testing results and analysis -->
+    <div class="item6">
+      <h3 
+      style="font-family: Helvetica, sans-serif; 
+      background-color:rgb(40, 40, 40);
+      color: white;
+      width: 100%; 
+      padding: 30px; 
+      margin-left: 30px; 
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+     User Testing Results & Analysis
+    </h3>
+    <!-- Card containing the instructions for the user testers -->
+    <div class="container">
+      <div class="card" style="max-width: 850px; flex-wrap: wrap;">
+        <h4><b>Instructions</b></h4>
+        <p>
+          Note: this is a click-through prototype that does not have full functionality. 
+          If you click somewhere on a page that doesn’t lead anywhere, the clickable buttons will be highlighted in blue.
+        </p>
+        <p>
+          For background on the app, Dr. Treat aims to be a tech enabled modern veterinary 
+          care company offering virtual and in-clinic services to pet parents. It aims to be 
+          data driven to offer highly personalized & preventative care for every pet. 
+        </p>
+        <p>
+          For this task, imagine you have three pet dogs, and you’d like to schedule an appointment 
+          for one of them, Clark. Imagine that while you are in this process, a veterinary 
+          emergency comes up, and you look to diagnose your dog through the app. Feel free 
+          to think aloud during your interaction with the prototype.
+        </p>
+        <p>
+          <ol>
+            <li>
+              Schedule an appointment for Clark through the “Your Pets” screen. 
+              Note that the header on the appointments page you reach should say “Clark’s Appointments”, not “All Pet Appointments”
+            </li>
+            <li>
+              You realize there is an emergency with Clark and want to navigate to the emergency screen. Please navigate to the appropriate page.
+            </li>
+            <li>
+              You realize you would like to conduct an At Home Diagnosis. Please navigate to the appropriate page.
+            </li>
+            <li>
+              You decide you want to chat with a Dr. Treat representative. Navigate to the chat screen to start a conversation.
+            </li>
+          </ol>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card containing the post-test questions for the user testers -->
+    <div class="container">
+      <div class="card" style="max-width: 850px; flex-wrap: wrap;">
+        <h4><b>Post Test Questions</b></h4>
+        <p>
+          <ul>
+            <li>
+              When completing the tasks, did you find that you were unable to complete any on your first try? 
+              If so, which task(s) caused issues and what incorrect steps did you take?
+            </li>
+            <li>
+              Which screen was most memorable to you?
+            </li>
+            <li>
+              Do you have any general feedback/suggestions for improving this application?
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    </div>
+    <!-- Div for user testing links to videos -->
+    <div class="item7">
+      <h3 
+      style="font-family: Helvetica, sans-serif; 
+      background-color:rgb(40, 40, 40);
+      color: white;
+      width: 100%; 
+      padding: 30px; 
+      margin-left: 30px; 
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+     User Testing Videos from 3 Users
+    </h3>
+    <video src="https://app.usertesting.com/v/7382e1e5-0ab4-4ed2-98be-e095ca814652?encrypted_video_handle=8eafa704-aca5-477d-9b45-2565ba1601bd#!/notes&shared_via=link"></video>
+    </div>
+
+    <!-- Div for any conclusions (or if we get feedback from Dr. Treat!) -->
+    <div class="item8"></div>
+    </div>
+    </div>
   </body>
 
 </html>

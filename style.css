@@ -38,12 +38,6 @@ max-width: 1300px;
   background-color: #eee;
 }
 
-
-
-.washingmachine {
-  border: 12px solid;
-}
-
 .and-menu {
   display: flex;
 }
@@ -84,20 +78,6 @@ a:hover, a:active {
 }
 .fa-cube{
   color: rgb(72, 36, 110);
-}
-
-#washer-settings2 {
-  border-collapse: collapse;
-  width: 100%;
-}
-#washer-settings2 td, #washer-settings2 th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#washer-settings2 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 #tab {background-color: #eee;}
@@ -165,4 +145,18 @@ transition: max-height 0.2s ease-out;
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+/* 
+* CSS to create sticky top bar. From https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
