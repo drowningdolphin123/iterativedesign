@@ -22,3 +22,9 @@ Self explanatory ;)
 
 ## Commit #5: STICKy wORKS
 Self explanatory ;)
+
+##
+Hi guys, tried to make the site look a little better with some visual changes and also added some emphasis on certain parts of the feedback section to make the most important parts of our long bullet list stand out. Here are some extra todos:
+
+  1) Maybe add a few sentences explaining why we accepted and rejected the feedback given to us 
+  2) There's some extra margin to the left of the entire body of the page when you start scrolling (might be a browser issue)
