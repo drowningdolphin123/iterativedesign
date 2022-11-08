@@ -6,7 +6,11 @@
     <!-- import CSS styles -->
     <link rel="stylesheet" href="styles.css" /> 
     <style>
-      .item1 {grid-area: header;}
+      body {
+        margin: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
       .item2 {grid-area: context;}
       .item3 {grid-area: initial-sketch;}
       .item4 {grid-area: wireframe;}
@@ -38,13 +42,53 @@
     padding: 14px 40px;
     cursor: pointer;
   }
-  .button-current {
-    background-color: rgb(246, 118, 153);
-    color: white;
-    border-radius: 12px;
-    padding: 14px 40px;
-    cursor: pointer;
-  }
+
+  .header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: rgb(40, 40, 40);
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: rgb(246, 118, 153);
+  color: rgb(40, 40, 40);
+}
+
+#navbar a.active {
+  background-color: rgb(246, 118, 153);
+  color: rgb(40, 40, 40);
+  font-size: 40;
+  cursor: default;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
     </style>
     <script src="https://kit.fontawesome.com/7a86d75748.js" crossorigin="anonymous"></script>
   </head>
@@ -53,24 +97,15 @@
   <body>
     <!-- Div for the topbar -->
     <div class="item1" style="box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
-      <div id="hwm-topbar" 
-      style="display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      background-color: rgb(40, 40, 40); 
-      font-family: Helvetica, sans-serif;
-      color: white;">
-      <h1 style="padding-left: 30px;">Dr. Treat Iterative Design</h1>
-      </div>
-
-      <div id="navbar" style="align-self: flex-start; padding-right: 30px;">
+      <div id="navbar">
         <!-- Buttons will lead to different portions of the page instead of completely different pages. -->
-        <input type="button" class="button-current" onClick="location.href='#context'" value="The Startup">
-        <input type="button" class="button-current" onClick="location.href='#sketches'" value="Initial Sketches">
-        <input type="button" class="button-current" onClick="location.href='#wireframe'" value="Wireframe">
-        <input type="button" class="button-current" onClick="location.href='#hifi'" value="Hi-Fi">
-        <input type="button" class="button-current" onClick="location.href='#analysis'" value="User Testing Results">
-        <input type="button" class="button-current" onClick="location.href='#videos'" value="User Testing Videos">
+        <a class="active">Dr. Treat Iterative Design</a>
+        <a href="#context">The Startup</a>
+        <a href="#sketches">Initial Sketches</a>
+        <a href="#wireframe">Wireframe</a>
+        <a href="#hifi">Hi-Fi</a>
+        <a href="#analysis">User Testing Results</a>
+        <a href="#videos">User Testing Videos</a>
       </div>
     </div>
 

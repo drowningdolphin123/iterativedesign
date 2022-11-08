@@ -12,7 +12,6 @@ img {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header'
     'context'
     'initial-sketch'
     'wireframe'
@@ -131,7 +130,14 @@ transition: max-height 0.2s ease-out;
 /* 
 * CSS to create sticky top bar. From https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
 #navbar {
+  overflow: hidden;
   background-color: #333;
 }
 

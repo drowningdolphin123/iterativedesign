@@ -19,3 +19,6 @@ Self explanatory ;)
 3) Another TODO: make the hifi section prettier. Unsure of how to approach that right now.
 
 4) Sticky top section still not working, will continue to try an implement because I think it would look the cleanest, but might give up soon :P
+
+## Commit #5: STICKy wORKS
+Self explanatory ;)
