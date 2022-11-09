@@ -6,7 +6,39 @@
     <!-- import CSS styles -->
     <link rel="stylesheet" href="style.css" /> 
     <style>
-      
+      .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(40, 40, 40);
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.img-text {
+  color: white;
+  font-size: 16px;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align:center;
+  padding: 2px;
+}
+.img-container {
+  position: relative;
+  width: auto;
+}
     </style>
     <script src="https://kit.fontawesome.com/7a86d75748.js" crossorigin="anonymous"></script>
   </head>
@@ -293,51 +325,45 @@
       <!-- User 1 -->
       <div class="container" style="display: flex; flex-direction: column;">
         <h4><b>User 1</b></h4>
-        <a href="https://app.usertesting.com/v/7382e1e5-0ab4-4ed2-98be-e095ca814652?encrypted_video_handle=8eafa704-aca5-477d-9b45-2565ba1601bd#!/notes&shared_via=link"
-        target="_blank">
         <div class="card" style="display: flex; max-width: 350px; flex-wrap: wrap; justify-content: center;">
-          <div >
-            <img src="https://www.w3schools.com/howto/img_avatar.png" width="300px" height="300px" />
+          <div class="img-container">
+            <a href="https://app.usertesting.com/v/7382e1e5-0ab4-4ed2-98be-e095ca814652?encrypted_video_handle=8eafa704-aca5-477d-9b45-2565ba1601bd#!/notes&shared_via=link"
+            target="_blank">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" width="300px" height="300px">
+            <div class="overlay">
+              <div class="img-text">Click here to visit the video 1</div>
+            </div>
+          </img>
+        </a>
           </div>
           <div>
-            <ol>
-              <li>
-                When completing the tasks, did you find that you were unable to complete any on your first try? 
-                If so, which task(s) caused issues and what incorrect steps did you take?
-              </li>
-              <li>
-                Which screen was most memorable to you?
-              </li>
-              <li>
-                Do you have any general feedback/suggestions for improving this application?
-              </li>
-            </ol>
+            <h3 style="color: black;">
+              "Straight forward, self explanatory."
+            </h3>
           </div>
-        </div>
-      </a>
+          </div>
       </div>
       <!-- User 2 -->
       <div class="container" style="display: flex; flex-direction: column;">
         <h4><b>User 2</b></h4>
-        <a href="https://app.usertesting.com/v/8496bd95-92fa-41de-892f-e44b5fd39a71?encrypted_video_handle=56d9a253-1b39-4876-af1a-bb76ef66cc4f#!/notes&shared_via=link"
-        target="_blank">
         <div class="card" style="display: flex; max-width: 350px; flex-wrap: wrap; justify-content: center;">
-          <div >
-            <img src="https://www.w3schools.com/howto/img_avatar2.png" width="300px" height="300px" />
+          <div class="img-container">
+            <a href="https://app.usertesting.com/v/8496bd95-92fa-41de-892f-e44b5fd39a71?encrypted_video_handle=56d9a253-1b39-4876-af1a-bb76ef66cc4f#!/notes&shared_via=link"
+            target="_blank">
+            <img src="https://www.w3schools.com/howto/img_avatar2.png" width="300px" height="300px">
+            <div class="overlay">
+              <div class="img-text">Click here to visit the video 2</div>
+            </div>
+          </img>
+        </a>
           </div>
           <div>
-            <ol>
-              <li>
-                When completing the tasks, did you find that you were unable to complete any on your first try? 
-                If so, which task(s) caused issues and what incorrect steps did you take?
-              </li>
-              <li>
-                Which screen was most memorable to you?
-              </li>
-              <li>
-                Do you have any general feedback/suggestions for improving this application?
-              </li>
-            </ol>
+            <h3 style="color: black">"It feels kind of playful."</h3>
+            <!-- Alternative quote:
+              Like the feel of this site, it makes sense. . . . 
+              It’s logical. I do like the feel of it, the brown and the red kind of surprises me for the color choices, 
+              but I think it works for what it is 
+            -->
           </div>
         </div>
         </a>
@@ -345,28 +371,25 @@
       <!-- User 3 -->
       <div class="container" style="display: flex; flex-direction: column;">
         <h4><b>User 3</b></h4>
-        <a href="https://app.usertesting.com/v/b195cc70-b5b1-43ed-ba24-c0db746d4365?encrypted_video_handle=0fe0dc64-a295-40f2-9c97-94ffe557c920#!/notes&shared_via=link"
-        target="_blank">
         <div class="card" style="display: flex; max-width: 350px; flex-wrap: wrap; justify-content: center;">
-          <div >
-            <img src="https://www.w3schools.com/w3images/avatar6.png" width="300px" height="300px" />
+          <div class="img-container">
+            <a href="https://app.usertesting.com/v/b195cc70-b5b1-43ed-ba24-c0db746d4365?encrypted_video_handle=0fe0dc64-a295-40f2-9c97-94ffe557c920#!/notes&shared_via=link"
+            target="_blank">
+            <img src="https://www.w3schools.com/w3images/avatar6.png" width="300px" height="300px">
+            <div class="overlay">
+              <div class="img-text">Click here to visit the video 3</div>
+            </div>
+          </img>
+        </a>
           </div>
           <div>
-            <ol>
-              <li>
-                When completing the tasks, did you find that you were unable to complete any on your first try? 
-                If so, which task(s) caused issues and what incorrect steps did you take?
-              </li>
-              <li>
-                Which screen was most memorable to you?
-              </li>
-              <li>
-                Do you have any general feedback/suggestions for improving this application?
-              </li>
-            </ol>
+            <h3 style="color: black;">
+              "Super easy to navigate."
+            </h3>
           </div>
         </div>
         </a>
+      </div>
       </div>
     </div>
     </div>
@@ -379,7 +402,6 @@
 
     <!-- Code to make sure the top bar (and most importantly, the buttons!) remain at the top so users can easily navigate to different portions of the page.-->
     <!-- From https://www.w3schools.com/howto/howto_js_navbar_sticky.asp -->
-    <!-- TODO: Not working yet. -->
     <script>
       window.onscroll = function() {myFunction()};
       
