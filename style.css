@@ -1,9 +1,5 @@
 
 
-/* Uncomment below if images are way too big.
-Selects all image tags and makes them 500px;
- */
-
  .separator {
   height: 25px;
   width: 5px;
@@ -103,6 +99,7 @@ padding: 16px;
 position: fixed;
 top: 0;
 width: 100%;
+z-index: 1;
 }
 
 .sticky + .content {
